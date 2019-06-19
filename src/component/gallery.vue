@@ -117,11 +117,22 @@
       },
       close() {
         if (this.instance !== null) {
+          //do not call this.instance.close() twice if called by blueimp-gallery already
+          if (this.instance.container[0].style.display == 'none') {
+            // console.log('vue-gallery: do not process twice')
+            return
+          }
           //prevent onclose and onclosed event from being fired cyclically
           this.instance.options.onclose = null;
           this.instance.options.onclosed = null;
           // this.instance.close() can not recover document.body.style.overflow value
-          this.instance.handleClose();
+          this.instance.close();
+          // if this.instance.container has not fired up webkitTransitionEnd event,
+          // we need call handleClose() manually
+          if (this.instance.container[0].style.display != 'none') {
+            // console.log('vue-gallery: call handleClose() manually')
+            this.instance.handleClose();
+          }
           this.instance = null;
         }
       },
