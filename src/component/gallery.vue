@@ -120,6 +120,7 @@
           //do not call this.instance.close() twice if called by blueimp-gallery already
           if (this.instance.container[0].style.display == 'none') {
             // console.log('vue-gallery: do not process twice')
+            this.instance = null;
             return
           }
           //prevent onclose and onclosed event from being fired cyclically
