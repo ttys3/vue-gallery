@@ -118,6 +118,9 @@
       close() {
         if (this.instance !== null) {
           this.instance.destroyEventListeners();
+          //prevent onclose and onclosed event from being fired cyclically
+          this.instance.options.onclose = null;
+          this.instance.options.onclosed = null;
           this.instance.close(); //close and onclosed custom event will $emit here
           this.instance = null;
         }
