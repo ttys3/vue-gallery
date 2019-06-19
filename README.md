@@ -20,6 +20,23 @@
 
 this is a modified version of [vue-gallery](https://github.com/RobinCK/vue-gallery) by [RobinCK](https://github.com/RobinCK)
 
+--------------------------------------------------
+
+## mod version changelog
+
+1. enterFullScreen(),exitFullScreen() and toggleFullScreen() methods added
+2. this mod version is more slight,
+only `blueimp-gallery.js`, `blueimp-gallery-fullscreen.js` and `blueimp-gallery.css` included.
+
+according to [blueimp-gallery doc](https://github.com/blueimp/Gallery#requirements):
+> The fullscreen, indicator, video, youtube and vimeo source files are optional if their functionality is not required.
+
+3. fixed the bug that `onclose` event from being fired cyclically
+4. fixed the bug that `destroyed()` hook can not properly call blueimp's `close()` function to do the cleanup jobs 
+   (especially the body scrollbar missing problem)
+
+--------------------------------------------------
+
 [![Greenkeeper badge](https://badges.greenkeeper.io/RobinCK/vue-gallery.svg)](https://greenkeeper.io/)
 :camera: VueJS responsive and customizable image and video gallery, carousel and lightbox, optimized for both mobile and desktop web browsers.
 
