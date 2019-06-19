@@ -107,9 +107,11 @@
       },
       close: function close() {
         if (this.instance !== null) {
-          this.instance.destroyEventListeners();
-          this.instance.close(); //close and onclosed custom event will $emit here
+          //prevent onclose and onclosed event from being fired cyclically
+          this.instance.options.onclose = null;
+          this.instance.options.onclosed = null; // this.instance.close() can not recover document.body.style.overflow value
 
+          this.instance.handleClose();
           this.instance = null;
         }
       },
@@ -280,7 +282,7 @@
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-37e2990f_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
+      inject("data-v-6b99fa3e_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
 
     };
     /* scoped */
