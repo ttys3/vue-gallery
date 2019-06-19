@@ -145,6 +145,23 @@
             node[0].appendChild(document.createTextNode(text));
           }
         }
+      },
+      enterFullScreen: function enterFullScreen() {
+        if (!this.instance.getFullScreenElement()) {
+          this.instance.requestFullScreen(this.instance.container[0]);
+        }
+      },
+      exitFullScreen: function exitFullScreen() {
+        if (this.instance.getFullScreenElement() === this.instance.container[0]) {
+          this.instance.exitFullScreen();
+        }
+      },
+      toggleFullScreen: function toggleFullScreen() {
+        if (this.instance.getFullScreenElement() === this.instance.container[0]) {
+          this.instance.exitFullScreen();
+        } else {
+          this.instance.requestFullScreen(this.instance.container[0]);
+        }
       }
     }
   };
@@ -296,7 +313,7 @@
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-425a964e_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
+      inject("data-v-cd66f9b2_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
 
     };
     /* scoped */
