@@ -75,12 +75,6 @@
 
         if (value !== null) {
           this.open(value);
-        } else {
-          if (this.instance) {
-            this.instance.close();
-          }
-
-          this.$emit('close');
         }
       },
     },
@@ -92,11 +86,7 @@
     },
 
     destroyed() {
-      if (this.instance !== null) {
-        this.instance.destroyEventListeners();
-        this.instance.close();
-        this.instance = null;
-      }
+      this.close()
     },
 
     methods: {
@@ -124,6 +114,13 @@
         }
 
         this.instance = instance(this.images, options);
+      },
+      close() {
+        if (this.instance !== null) {
+          this.instance.destroyEventListeners();
+          this.instance.close(); //close and onclosed custom event will $emit here
+          this.instance = null;
+        }
       },
       onSlideCustom(index, slide) {
         this.$emit('onslide', { index, slide });
