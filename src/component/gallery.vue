@@ -150,6 +150,23 @@
           }
         }
       },
+      enterFullScreen() {
+        if (!this.instance.getFullScreenElement()) {
+          this.instance.requestFullScreen(this.instance.container[0])
+        }
+      },
+      exitFullScreen() {
+        if (this.instance.getFullScreenElement() === this.instance.container[0]) {
+          this.instance.exitFullScreen()
+        }
+      },
+      toggleFullScreen() {
+        if (this.instance.getFullScreenElement() === this.instance.container[0]) {
+          this.instance.exitFullScreen()
+        } else {
+          this.instance.requestFullScreen(this.instance.container[0])
+        }
+      },
     },
   };
 </script>
