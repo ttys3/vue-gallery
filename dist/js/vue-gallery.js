@@ -92,7 +92,7 @@
             });
           },
           onclose: function onclose() {
-            return _this.$emit('close');
+            return _this.$emit('onclose');
           },
           onclosed: function onclosed() {
             return _this.$emit('onclosed');
@@ -295,7 +295,7 @@
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-2d3f273e_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
+      inject("data-v-c3ed5abc_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
 
     };
     /* scoped */
