@@ -30,29 +30,20 @@ this is a modified version of [vue-gallery](https://github.com/RobinCK/vue-galle
 [jsFiddle - video](https://fiddle.jshell.net/Robin_ck/djqcrm8m/show/light/)
 
 ## Install
-#### CDN
-
-Recommended: https://unpkg.com/vue-gallery, which will reflect the latest version as soon as it is published to npm. You can also browse the source of the npm package at https://unpkg.com/vue-gallery/
-
-#### NPM
-
-``` bash
-npm install vue-gallery --save
-```
 
 #### Yarn
 
 ``` bash
-yarn add vue-gallery
+yarn add https://github.com/ttys3/vue-gallery.git
 ```
 ## Development Setup
 
 ``` bash
 # install dependencies
-npm install
+yarn install
 
 # build dist files
-npm run build
+yarn run build
 ```
 
 ## Usage
