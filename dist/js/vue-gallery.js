@@ -110,6 +110,7 @@
           //do not call this.instance.close() twice if called by blueimp-gallery already
           if (this.instance.container[0].style.display == 'none') {
             // console.log('vue-gallery: do not process twice')
+            this.instance = null;
             return;
           } //prevent onclose and onclosed event from being fired cyclically
 
@@ -295,7 +296,7 @@
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-c3ed5abc_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
+      inject("data-v-425a964e_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
 
     };
     /* scoped */
