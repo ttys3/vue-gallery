@@ -105,7 +105,7 @@
           onslide: this.onSlideCustom,
           onslideend: (index, slide) => this.$emit('onslideend', { index, slide }),
           onslidecomplete: (index, slide) => this.$emit('onslidecomplete', { index, slide }),
-          onclose: () => this.$emit('close'),
+          onclose: () => this.$emit('onclose'),
           onclosed: () => this.$emit('onclosed'),
         }, this.options);
 
