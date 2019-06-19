@@ -18,6 +18,8 @@
 
 # vue-gallery
 
+this is a modified version of [vue-gallery](https://github.com/RobinCK/vue-gallery) by [RobinCK](https://github.com/RobinCK)
+
 [![Greenkeeper badge](https://badges.greenkeeper.io/RobinCK/vue-gallery.svg)](https://greenkeeper.io/)
 :camera: VueJS responsive and customizable image and video gallery, carousel and lightbox, optimized for both mobile and desktop web browsers.
 
@@ -59,7 +61,7 @@ npm run build
 ```html
 <template>
   <div>
-    <gallery :images="images" :index="index" @close="index = null"></gallery>
+    <gallery :images="images" :index="index" @onclosed="onGalleryClosed"></gallery>
     <div
       class="image"
       v-for="(image, imageIndex) in images"
@@ -89,6 +91,13 @@ npm run build
     components: {
       'gallery': VueGallery
     },
+    methods: {
+      onGalleryClosed() {
+        // eslint-disable-next-line no-console
+        console.log('onGalleryClosed() triggerd.')
+        //do other cleanup work
+      }
+    }
   }
 </script> 
 
@@ -116,7 +125,7 @@ npm run build
   
 
 <div id="app">
-  <gallery :images="images" :index="index" @close="index = null"></gallery>
+  <gallery :images="images" :index="index" @onclosed="onGalleryClosed"></gallery>
   <div
     class="image"
     v-for="image, imageIndex in images"
@@ -142,6 +151,13 @@ npm run build
 
     components: {
       'gallery': VueGallery
+    },
+    methods: {
+      onGalleryClosed() {
+        // eslint-disable-next-line no-console
+        console.log('onGalleryClosed() triggerd.')
+        //do other cleanup work
+      }
     }
   });
 </script>
