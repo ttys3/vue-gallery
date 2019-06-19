@@ -107,11 +107,24 @@
       },
       close: function close() {
         if (this.instance !== null) {
-          //prevent onclose and onclosed event from being fired cyclically
+          //do not call this.instance.close() twice if called by blueimp-gallery already
+          if (this.instance.container[0].style.display == 'none') {
+            // console.log('vue-gallery: do not process twice')
+            return;
+          } //prevent onclose and onclosed event from being fired cyclically
+
+
           this.instance.options.onclose = null;
           this.instance.options.onclosed = null; // this.instance.close() can not recover document.body.style.overflow value
 
-          this.instance.handleClose();
+          this.instance.close(); // if this.instance.container has not fired up webkitTransitionEnd event,
+          // we need call handleClose() manually
+
+          if (this.instance.container[0].style.display != 'none') {
+            // console.log('vue-gallery: call handleClose() manually')
+            this.instance.handleClose();
+          }
+
           this.instance = null;
         }
       },
@@ -282,7 +295,7 @@
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-6b99fa3e_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
+      inject("data-v-2d3f273e_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
 
     };
     /* scoped */
