@@ -48,12 +48,6 @@
 
         if (value !== null) {
           this.open(value);
-        } else {
-          if (this.instance) {
-            this.instance.close();
-          }
-
-          this.$emit('close');
         }
       }
     },
@@ -63,11 +57,7 @@
       }
     },
     destroyed: function destroyed() {
-      if (this.instance !== null) {
-        this.instance.destroyEventListeners();
-        this.instance.close();
-        this.instance = null;
-      }
+      this.close();
     },
     methods: {
       open: function open() {
@@ -114,6 +104,14 @@
         }
 
         this.instance = instance(this.images, options);
+      },
+      close: function close() {
+        if (this.instance !== null) {
+          this.instance.destroyEventListeners();
+          this.instance.close(); //close and onclosed custom event will $emit here
+
+          this.instance = null;
+        }
       },
       onSlideCustom: function onSlideCustom(index, slide) {
         this.$emit('onslide', {
@@ -282,7 +280,7 @@
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-1e7edf37_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
+      inject("data-v-37e2990f_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
 
     };
     /* scoped */
