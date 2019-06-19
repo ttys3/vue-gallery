@@ -117,11 +117,11 @@
       },
       close() {
         if (this.instance !== null) {
-          this.instance.destroyEventListeners();
           //prevent onclose and onclosed event from being fired cyclically
           this.instance.options.onclose = null;
           this.instance.options.onclosed = null;
-          this.instance.close(); //close and onclosed custom event will $emit here
+          // this.instance.close() can not recover document.body.style.overflow value
+          this.instance.handleClose();
           this.instance = null;
         }
       },
