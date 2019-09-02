@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('blueimp-gallery/css/blueimp-gallery.css'), require('blueimp-gallery/js/blueimp-gallery.js'), require('blueimp-gallery/js/blueimp-gallery-fullscreen.js')) :
-  typeof define === 'function' && define.amd ? define(['blueimp-gallery/css/blueimp-gallery.css', 'blueimp-gallery/js/blueimp-gallery.js', 'blueimp-gallery/js/blueimp-gallery-fullscreen.js'], factory) :
-  (global = global || self, global.VueGallery = factory(null, global.blueimp));
-}(this, function (blueimpGallery_css, blueimp) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('blueimp-gallery/css/blueimp-gallery.css'), require('blueimp-gallery/css/blueimp-gallery-indicator.css'), require('blueimp-gallery/js/blueimp-helper.js'), require('blueimp-gallery/js/blueimp-gallery.js'), require('blueimp-gallery/js/blueimp-gallery-fullscreen.js'), require('blueimp-gallery/js/blueimp-gallery-indicator.js')) :
+  typeof define === 'function' && define.amd ? define(['blueimp-gallery/css/blueimp-gallery.css', 'blueimp-gallery/css/blueimp-gallery-indicator.css', 'blueimp-gallery/js/blueimp-helper.js', 'blueimp-gallery/js/blueimp-gallery.js', 'blueimp-gallery/js/blueimp-gallery-fullscreen.js', 'blueimp-gallery/js/blueimp-gallery-indicator.js'], factory) :
+  (global = global || self, global.VueGallery = factory(null, null, null, global.blueimp));
+}(this, function (blueimpGallery_css, blueimpGalleryIndicator_css, blueimpHelper_js, blueimp) { 'use strict';
 
   blueimp = blueimp && blueimp.hasOwnProperty('default') ? blueimp['default'] : blueimp;
 
@@ -13,26 +13,26 @@
     props: {
       images: {
         type: Array,
-        default: function _default() {
+        "default": function _default() {
           return [];
         }
       },
       options: {
         type: Object,
-        default: function _default() {
+        "default": function _default() {
           return {};
         }
       },
       carousel: {
         type: Boolean,
-        default: false
+        "default": false
       },
       index: {
         type: Number
       },
       id: {
         type: String,
-        default: 'blueimp-gallery'
+        "default": 'blueimp-gallery'
       }
     },
     data: function data() {
@@ -313,7 +313,7 @@
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-cd66f9b2_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
+      inject("data-v-4caa35f8_0", { source: ".blueimp-gallery>.description{position:absolute;top:30px;left:15px;color:#fff;display:none}.blueimp-gallery-controls>.description{display:block}", map: undefined, media: undefined });
 
     };
     /* scoped */
