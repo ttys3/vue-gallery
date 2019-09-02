@@ -1,8 +1,7 @@
 <template>
   <div
     :id="id"
-    class="blueimp-gallery blueimp-gallery-controls"
-    :class="{'blueimp-gallery-carousel': carousel}">
+    :class="{'blueimp-gallery':true, 'blueimp-gallery-controls': true, 'blueimp-gallery-carousel': carousel}">
 
     <div class="slides"></div>
     <h3 class="title"></h3>
