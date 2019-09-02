@@ -23,10 +23,12 @@
 
 <script>
   //use blueimp-gallery.css instead of blueimp-gallery.min.css,
-  // because we do not need blueimp-gallery-indicator.css and blueimp-gallery-video.css
+  // because we do not need blueimp-gallery-video.css
   import 'blueimp-gallery/css/blueimp-gallery.css';
+  import 'blueimp-gallery/css/blueimp-gallery-indicator.css';
   import blueimp from 'blueimp-gallery/js/blueimp-gallery.js';
   import 'blueimp-gallery/js/blueimp-gallery-fullscreen.js';
+  import 'blueimp-gallery/js/blueimp-gallery-indicator.js';
   // import 'blueimp-gallery/js/blueimp-gallery-video.js';
   // import 'blueimp-gallery/js/blueimp-gallery-youtube.js';
 
