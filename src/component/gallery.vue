@@ -16,8 +16,8 @@
     <a v-if="!carousel" class="close">
       <slot name="close">X</slot>
     </a>
-    <ol v-if="!carousel" class="indicator"></ol>
-    <a v-if="carousel" class="play-pause"></a>
+    <ol v-if="showIndicator" class="indicator"></ol>
+    <a v-if="showPlay" class="play-pause"></a>
   </div>
 </template>
 
@@ -53,7 +53,14 @@
         type: Boolean,
         default: false,
       },
-
+      showIndicator: {
+          type: Boolean,
+          default: true,
+      },
+      showPlay: {
+          type: Boolean,
+          default: true,
+      },
       index: {
         type: Number,
       },
@@ -98,7 +105,11 @@
 
         const options = Object.assign({
           toggleControlsOnReturn: false,
-          toggleControlsOnSlideClick: false,
+          toggleControlsOnSlideClick: true,
+          enableKeyboardNavigation: true,
+          closeOnSwipeUpOrDown: true,
+          hidePageScrollbars: false,
+          emulateTouchEvents: true,
           closeOnSlideClick: false,
           carousel: this.carousel,
           container: `#${this.id}`,
