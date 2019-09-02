@@ -26,6 +26,7 @@
   // because we do not need blueimp-gallery-video.css
   import 'blueimp-gallery/css/blueimp-gallery.css';
   import 'blueimp-gallery/css/blueimp-gallery-indicator.css';
+  import 'blueimp-gallery/js/blueimp-helper.js';
   import blueimp from 'blueimp-gallery/js/blueimp-gallery.js';
   import 'blueimp-gallery/js/blueimp-gallery-fullscreen.js';
   import 'blueimp-gallery/js/blueimp-gallery-indicator.js';
