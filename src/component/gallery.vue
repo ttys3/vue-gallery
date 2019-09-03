@@ -6,10 +6,10 @@
     <div class="slides"></div>
     <h3 class="title"></h3>
     <p class="description"></p>
-    <a class="prev">
+    <a class="prev" v-if="showPrevNext">
       <slot name="prev">‹</slot>
     </a>
-    <a class="next">
+    <a class="next" v-if="showPrevNext">
       <slot name="next">›</slot>
     </a>
     <a v-if="showClose" class="close">
@@ -61,6 +61,10 @@
           default: true,
       },
       showClose: {
+        type: Boolean,
+        default: true,
+      },
+      showPrevNext: {
         type: Boolean,
         default: true,
       },
