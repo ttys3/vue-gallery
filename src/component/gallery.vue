@@ -12,7 +12,7 @@
     <a class="next">
       <slot name="next">›</slot>
     </a>
-    <a v-if="!carousel" class="close">
+    <a v-if="showClose" class="close">
       <slot name="close">X</slot>
     </a>
     <ol v-if="showIndicator" class="indicator"></ol>
@@ -59,6 +59,10 @@
       showPlay: {
           type: Boolean,
           default: true,
+      },
+      showClose: {
+        type: Boolean,
+        default: true,
       },
       index: {
         type: Number,
