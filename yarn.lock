@@ -888,10 +888,10 @@ bluebird@^3.1.1:
   resolved "https://registry.npm.taobao.org/bluebird/download/bluebird-3.5.5.tgz#a8d0afd73251effbbd5fe384a77d73003c17a71f"
   integrity sha1-qNCv1zJR7/u9X+OEp31zADwXpx8=
 
-blueimp-gallery@^2.35.0:
-  version "2.35.0"
-  resolved "https://registry.npm.taobao.org/blueimp-gallery/download/blueimp-gallery-2.35.0.tgz#96d5792138e3365ce83d0a4afd84a7f803612b29"
-  integrity sha1-ltV5ITjjNlzoPQpK/YSn+ANhKyk=
+blueimp-gallery@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/blueimp-gallery/-/blueimp-gallery-3.3.0.tgz#99186417fe86c3df32722be2af7b991c3048ef27"
+  integrity sha512-oUL10yoUGM9KZ8mP255/A/rp+w88TdiiS4KPbaUbOavlJdq8g/6ojZ5OPMRT8fsr1WHazJw5GCfU/i1p3ajq0g==
 
 brace-expansion@^1.1.7:
   version "1.1.11"

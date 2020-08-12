@@ -39,7 +39,7 @@
     "vue-component"
   ],
   "dependencies": {
-    "blueimp-gallery": "^2.35.0"
+    "blueimp-gallery": "^3.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
