@@ -650,16 +650,6 @@
   dependencies:
     "@types/babel-types" "*"
 
-"@types/estree@0.0.39":
-  version "0.0.39"
-  resolved "https://registry.npm.taobao.org/@types/estree/download/@types/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
-  integrity sha1-4Xfmme4bjCLSMXTKqnQiZEOJUJ8=
-
-"@types/node@^12.7.2":
-  version "12.7.3"
-  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-12.7.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-12.7.3.tgz#27b3f40addaf2f580459fdb405222685542f907a"
-  integrity sha1-J7P0Ct2vL1gEWf20BSImhVQvkHo=
-
 "@vue/component-compiler-utils@^3.0.0":
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/@vue/component-compiler-utils/download/@vue/component-compiler-utils-3.0.0.tgz#d16fa26b836c06df5baaeb45f3d80afc47e35634"
@@ -717,11 +707,6 @@ acorn@^6.0.7:
   version "6.3.0"
   resolved "https://registry.npm.taobao.org/acorn/download/acorn-6.3.0.tgz#0087509119ffa4fc0a0041d1e93a417e68cb856e"
   integrity sha1-AIdQkRn/pPwKAEHR6TpBfmjLhW4=
-
-acorn@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.npm.taobao.org/acorn/download/acorn-7.0.0.tgz#26b8d1cd9a9b700350b71c0905546f64d1284e7a"
-  integrity sha1-JrjRzZqbcANQtxwJBVRvZNEoTno=
 
 ajv@^6.10.2, ajv@^6.5.5, ajv@^6.9.1:
   version "6.10.2"
@@ -1455,6 +1440,11 @@ fsevents@^2.0.6:
   version "2.0.7"
   resolved "https://registry.npm.taobao.org/fsevents/download/fsevents-2.0.7.tgz#382c9b443c6cbac4c57187cdda23aa3bf1ccfc2a"
   integrity sha1-OCybRDxsusTFcYfN2iOqO/HM/Co=
+
+fsevents@~2.3.1:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
+  integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -2524,14 +2514,12 @@ rollup-pluginutils@^2.3.0, rollup-pluginutils@^2.4.1, rollup-pluginutils@^2.6.0,
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^1.1.2:
-  version "1.20.3"
-  resolved "https://registry.npm.taobao.org/rollup/download/rollup-1.20.3.tgz#6243f6c118ca05f56b2d9433112400cd834a1eb8"
-  integrity sha1-YkP2wRjKBfVrLZQzESQAzYNKHrg=
-  dependencies:
-    "@types/estree" "0.0.39"
-    "@types/node" "^12.7.2"
-    acorn "^7.0.0"
+rollup@^2.41.0:
+  version "2.41.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.41.0.tgz#b2a398bbabbf227738dedaef099e494aed468982"
+  integrity sha512-Gk76XHTggulWPH95q8V62bw6uqDH6UGvbD6LOa3QUyhuMF3eOuaeDHR7SLm1T9faitkpNrqzUAVYx47klcMnlA==
+  optionalDependencies:
+    fsevents "~2.3.1"
 
 run-async@^2.2.0:
   version "2.3.0"
